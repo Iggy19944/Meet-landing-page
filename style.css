@@ -1,0 +1,405 @@
+/* STYLE GUIDE */
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+
+--Fonts
+
+font-familly: 'red hard display';
+font-weight:
+
+
+--- 02 COLOR
+color: #28283D
+color: #87879D
+color: #FFFFFF
+color: #4D96A9
+color: #855FB1
+color: #8FE3F9
+color: #D9B8FF
+color: #DFDFDF
+color: #FAFAFA
+
+
+
+
+--- LAYOUT
+
+Designs were created for the following width:
+
+Mobile: 375px
+Tablet: 768px
+Desktop: 1440px
+
+ 
+*/
+
+/* //////////////////////////////////////////////////////////// */
+/*    GLOBAL RESET START                                         /
+/* //////////////////////////////////////////////////////////// */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* //////////////////////////////////////////////////////////// */
+/*   GLOBAL RESET END                                         */
+/* //////////////////////////////////////////////////////////// */
+
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0 auto;
+
+
+
+}
+
+main {
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img-desktop {
+    display: none;
+}
+
+/* LOGO AND PROFILE PICTURE */
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3.5rem;
+}
+
+.profile-imgs-container {
+    overflow-x: hidden;
+}
+
+.profile-imgs {
+    max-width: 110%;
+    margin-left: -5%;
+    object-fit: cover;
+}
+
+/* HERO CONTAINER */
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-wrap: balance;
+    gap: 2rem;
+
+}
+
+/* HERO SECTION */
+
+.hero-heading {
+    color: #28283D;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-align: center;
+    text-wrap: balance;
+
+}
+
+.hero-text {
+    color: #87879D;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    text-wrap: balance;
+    margin-top: 1.5rem;
+}
+
+/* HERO BUTTONS */
+
+.hero-btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 70%;
+}
+
+.hero-btn {
+    display: block;
+    color: #FFFFFF;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 900;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.hero-btn-1 {
+    background-color: #4D96a9;
+    padding: 1rem 2.5rem;
+}
+
+.hero-btn-1 span {
+    color: #8fe3f9;
+
+}
+
+.hero-btn-2 {
+    background-color: #855FB1;
+    padding: 1rem 2rem;
+}
+
+/* PSEUDO ELEMENTS */
+
+.section-indicator {
+    position: relative;
+    display: flex;
+    color: #87879D;
+    font-size: 1rem;
+    font-weight: 800;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    border: 1px solid hsla(240, 10%, 57%, 0.25);
+    justify-content: center;
+    align-items: center;
+    margin-top: 10.25rem;
+}
+
+.section-indicator-1::before {
+    content: "";
+    width: 0.1rem;
+    height: 5.5rem;
+    background-color: hsla(240, 10%, 57%, 0.25);
+    position: absolute;
+    top: -87px;
+
+}
+
+/*  VIDEOCHAT IMAGES SECTION */
+
+.videochat-imgs-container {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 217px));
+    gap: calc(4vw + 1rem);
+    justify-content: center;
+    margin-top: 4rem;
+
+
+}
+
+.imgs-container {
+    justify-content: center;
+}
+
+.videochat-imgs-container img {
+    border-radius: 12px;
+}
+
+/* PRODUCT DESCRIPTION SECTION */
+
+.features-container {
+    text-wrap: balance;
+    max-width: 79ch;
+
+}
+
+.features-small-heading {
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
+    line-height: 1.3;
+    color: #4D96A9;
+    text-transform: uppercase;
+    margin-top: 4rem;
+
+
+}
+
+.features-heading,
+.features-small-heading,
+.features-text {
+    text-align: center;
+}
+
+.features-heading {
+    font-size: 2rem;
+    line-height: 1.1;
+    color: #28283D;
+    font-weight: 800;
+    margin-top: 1.5rem;
+
+}
+
+.features-text {
+    font-family: 1rem;
+    line-height: 1.6;
+    margin-top: 2rem;
+    color: #87879D;
+}
+
+/* SECTION 2 */
+.section-indicator-2 {
+    background-color: #FFFFFF;
+    top: 28px;
+    z-index: 1;
+}
+
+.section-indicator-2::before {
+    content: "";
+    width: 0.1rem;
+    height: 5.5rem;
+    background-color: hsla(240, 10%, 57%, 0.25);
+    position: absolute;
+    top: -87px;
+
+}
+
+/* CTA */
+
+.cta-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(77, 150, 168);
+    background-image: url(/starter-code/assets/mobile/image-footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 6rem 1.5rem 4.5rem 1.5rem;
+
+}
+
+.cta-section-container::before {
+    content: "";
+    background-color: rgba(77, 150, 168, 0.618);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.cta-heading,
+.cta-text,
+.cta-btn-container {
+    position: relative;
+
+
+
+}
+
+.cta-heading {
+    color: #FAFAFA;
+    font-size: 2rem;
+    line-height: 1.1;
+
+}
+
+.cta-text {
+    color: #FAFAFA;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+.cta-btn-container {
+    /* display: flex; */
+    justify-content: center;
+}
+
+.cta-btn-container span {
+    color: #D9B8FF;
+}
+
+.cta-btn {
+    background-color: #855FB1;
+    padding: 1rem 2.5rem;
+
+}
